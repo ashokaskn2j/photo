@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    width: 100%;
+    height: 700px;
+    background-color: rgb(255, 255, 254);
+    display: flex;
+}
+.left{
+    width: 300px;
+    height: 100%;
+    background-color:white;
+    border-right: 1px solid black;
+}
+ .left img{
+    margin-left: 50px;
+    width: 200px;
+    position: relative;
+    right: 20px;
+    
+}
+.list{
+    background-color:white;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.list .ul{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.list .ul li{
+    width: 200px;
+    list-style-type: none;
+    margin: 5px 10px;
+    position: static;
+}
+.list .ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px ;
+}
+.left .ul li a:hover{
+    background-color: black;
+    color: white;
+}
+.home li{
+    display: none;
+    position: relative;
+    left: 60px;
+    top: -30px;
+    
+
+}
+.left ul li:nth-child(1):hover .home li{
+
+    display: block;
+    color: blue;
+}
+.left p{
+    text-align: center ;
+    padding-top:100px ;
+    
+}
+.left input{
+    text-align: center;
+ 
+    margin-left:40px ;
+
+}
+.container header pre{
+    font-size: 2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    
+}
+header{
+    display: flex;
+}
+header ul{
+    display: flex;
+    padding-left:260px ;
+
+}
+header ul li{
+    list-style-type: none;
+    padding: 20px 5px;
+}
+header ul li a {
+    text-decoration: none;
+    color: black;
+    border: 0.1px solid black;
+    padding: 4px;
+    border-radius: 10px;
+}
+header ul li a:hover{
+    background-color: aquamarine;
+}
+.im{
+   width: 100%;
+   margin-left: 10px;
+   padding-left: 10px;
+
+}
+.im img{
+    width: 250px;
+    height: 180px;
+    margin: 0 10px 10px 0;
+    border-radius: 2px 40px 2px;
+}
+.im img:hover{
+    
+}
