@@ -1,0 +1,195 @@
+/* Custom Styles */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease; /* Smooth background transition */
+}
+
+h2 b {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Header Navigation Styling */
+header ul.nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.nav-pills .nav-link {
+    color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+.butt{
+    position: absolute;
+    top:60px ;
+    right: 100px;
+    
+}
+.butt button{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+.butt button:hover{
+    opacity: 1;
+    transform: scale(1.1); 
+}
+.butt button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* List Styling */
+.list-group-item {
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+    transform: translateX(10px); /* Slide to the right on hover */
+}
+.list-unstyled{
+    display: none;
+}
+
+/* Search Input */
+input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease; /* Border color transition */
+}
+
+input[type="search"]:focus {
+    border-color: #007bff;
+    outline: none; /* Remove outline on focus */
+}
+
+/* Sidebar and Content Styling */
+.col-md-4 {
+    padding: 0 15px;
+    position: relative;
+}
+
+/* Image Styling */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Images */
+img.img-fluid:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Animation for images when they appear on screen */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img-animate {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Sidebar */
+.bg-light {
+    background-color: #f4f6f9 !important;
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+/* Add an animation to the whole page */
+.page-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-md-3, .col-md-9 {
+        padding: 0;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .list-group-item {
+        font-size: 14px;
+    }
+
+    .nav-pills .nav-link {
+        font-size: 14px;
+    }
+
+    .img-fluid {
+        margin-bottom: 15px;
+    }
+}
+
+/* Scroll Animation */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scroll-animate {
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Hover effect for card-like elements */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,164 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/pstyle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* General Photography Box Styling */
+.p1, .p2, .p3, .p4, .p5 {
+    text-align: center;
+    color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for animation */
+    border-radius: 10px; /* Rounded corners for the boxes */
+}
+
+/* Individual Photography Box Styles */
+.p1 {
+    width: 300px;
+    height: 200px;
+    background-image: url(./images/p1.jpg);
+    top: 10px;
+    right: 400px;
+    animation: fadeInRight 1s ease-out;
+}
+
+.p2 {
+    width: 250px;
+    height: 400px;
+    background-image: url(./images/p2.jpg);
+    top: 50px;
+    right: 50px;
+    animation: fadeInRight 1s ease-out 0.5s;
+}
+
+.p3 {
+    width: 300px;
+    height: 200px;
+    background-image: url(./images/p3.jpg);
+    bottom: 10px;
+    right: 340px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.p4 {
+    width: 300px;
+    height: 200px;
+    background-image: url(./images/p4.jpg);
+    bottom: 50px;
+    left: 330px;
+    animation: fadeInLeft 1s ease-out 0.5s;
+}
+
+.p5 {
+    width: 300px;
+    height: 200px;
+    background-image: url(./images/p5.jpg);
+    left: 20px;
+    bottom: 200px;
+    animation: fadeInBottom 1s ease-out;
+}
+
+/* Animation Effects */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect on Photography Boxes */
+.p1:hover, .p2:hover, .p3:hover, .p4:hover, .p5:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+/* Header Styling */
+h1 {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Add text shadow for better visibility */
+    animation: fadeInText 1s ease-out;
+}
+
+/* Text Fade In Animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Styling */
+img {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    margin-left: 200px;
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #fff; /* White border around the image */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: rotate(360deg); /* Rotate image on hover */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .p1, .p2, .p3, .p4, .p5 {
+        width: 80%;
+        height: auto;
+        position: relative;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}

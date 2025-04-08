@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(139, 67, 233);
+}
+.container{
+    width: 90%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+}
+.left{
+    width: 60%;
+    height: 500px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: url(./images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:hue;
+}
+.left h2{
+    padding-top: 100px;
+}
+.left p {
+    padding: 0 20px;
+}
+.right{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 500px;
+    text-align: center;
+}
+.right h4{
+    margin-top: 100px;
+}
+.right input{
+    width: 60%;
+    height: 30px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 100px;
+}
+.rigth button a{
+   text-decoration: none;
+  
+}
