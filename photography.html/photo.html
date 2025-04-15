@@ -1,71 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photogrhy</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
- 
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matina Blog</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      animation: fadeInDown 1s ease;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #000;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 40px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero img {
+      max-width: 45%;
+      border-radius: 10px;
+      animation: zoomIn 1s ease;
+    }
+
+    .hero-text {
+      max-width: 45%;
+    }
+
+    .hero-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .hero-text button {
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero-text button:hover {
+      background: #555;
+    }
+
+    .featured {
+      padding: 40px 20px;
+      background-color: #fff;
+      animation: fadeIn 2s ease;
+    }
+
+    .featured h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .posts {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .post {
+      width: 30%;
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .post:hover {
+      transform: scale(1.03);
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .post h4 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .post small {
+      display: block;
+      margin-bottom: 10px;
+      color: #777;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero img, .hero-text {
+        max-width: 100%;
+      }
+
+      .posts {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .post {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="./compass.png" alt="">
-            <div class="list">
-            <ul class="ul">
-                <li><a href="#">Home</a>
-                <ul class="home">
-                    <li><a href="#">Cantact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">services</a></li>
-                </ul>
-                </li>
-                <li><a href="#">Style</a></li>
-                <li><a href="#">Single Posts</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Commercial</a></li>
-            </ul>
-            </div>
-            <p>
-                WordPress There build by 
-                <b>Shufflehound</b>
-            </p>
-            <input type="search ">
 
-        </div>
-        <div class="right">
-            <header>
-                <pre>Our <b>Latest Work</b></pre>
-                <ul>
-                    <li><a href="#">All</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Commercial</a></li>
-                    <li><a href="#">Designs</a></li>
-                    <li><a href="#">Misc</a></li>
-                    <li><a href="#">Make-up</a></li>
-                    <li><a href="#">Photogrphy</a></li>
-                    <li><a href="#">Tech</a></li>
-                </ul>
-            </header>
-            <div class="im">
-            <img src="./10s.jpg" alt="">
-            <img src="./9s.jpg" alt="">
-            <img src="./2s.jpg" alt="">
-            <img src="./12s.jpg" alt="">
-            <img src="./5s.jpg" alt="">
-            <img src="./1s.jpg" alt="">
-            <img src="./8s.jpg" alt="">
-            <img src="./14s.jpg" alt="">
-            <img src="./3s.jpg" alt="">
-            <img src="./11s.jpg" alt="">
-            <img src="./4s.jpg" alt="">
-            <img src="./6s.jpg" alt="">
-            
-        </div>
-        </div>
+  <header>
+    <h1>Matina</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">Travel</a>
+      <a href="#">Categories</a>
+      <a href="#">Features</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?fit=crop&w=600&h=600&q=80" alt="Nature Image" />
+    <div class="hero-text">
+      <h2>Understanding Your Inner Self</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <button>Read More</button>
     </div>
+  </section>
+
+  <section class="featured">
+    <h3>Featured Posts</h3>
+    <div class="posts">
+      <div class="post">
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?fit=crop&w=600&h=400&q=80" alt="Post 1" />
+        <small>Travel - July 8, 2020</small>
+        <h4>Accepting And Appreciating Yourself</h4>
+      </div>
+      <div class="post">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=600&h=400&q=80" alt="Post 2" />
+        <small>Lifestyle - July 8, 2020</small>
+        <h4>Enjoying The Little Things In Life</h4>
+      </div>
+      <div class="post">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=600&h=400&q=80" alt="Post 3" />
+        <small>Travel - July 8, 2020</small>
+        <h4>Working From Home</h4>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
